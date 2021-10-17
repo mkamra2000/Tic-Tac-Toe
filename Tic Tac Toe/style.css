@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Prompt:wght@400&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(31, 30, 30);
+    height:56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+.navbar{
+    color: rgb(227, 230, 233);
+    font-size: 22px;
+    font-family: 'IM Fell English SC', serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.gameContainer{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    margin: 0 12px;
+}
+
+.box{
+    border: 1.5px solid rgb(31, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxText{
+    font-family: 'Prompt', sans-serif;
+}
+
+.resetScreen{
+    position: absolute;
+    top:56px;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    background-color: rgba(0, 0, 0, 0.794);
+}
