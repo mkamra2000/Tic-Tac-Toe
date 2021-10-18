@@ -1,53 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Prompt:wght@400&display=swap');
-body{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Prompt:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-header{
-    background-color: rgb(31, 30, 30);
-    height:56px;
-    display: flex;
+header {
+  background-color: rgb(7, 9, 39);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.navbar {
+  color: rgb(227, 230, 233);
+  font-size: 22px;
+  font-family: "IM Fell English SC", serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.gameContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 11vw);
+  grid-template-rows: repeat(3, 11vw);
+  margin: 39px;
+}
+
+.box {
+  border: 4.5px solid rgb(7, 9, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: rgb(226 229 255 / 97%);
+}
+
+.gameInfoMain {
+  font-size: 50px;
+  color: rgb(7, 9, 39);
+  font-weight: 800;
+  font-family: "Oswald", sans-serif;
+}
+
+.resetScreen {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  height: 120px;
+}
+
+#reset {
+  padding: 12px;
+  width: 10vw;
+  height: 61px;
+  border-radius: 43px;
+  border: 2px solid aliceblue;
+  background-color: rgb(7, 9, 39);
+  color: aliceblue;
+  font-size: 18px;
+}
+
+.bl {
+  border-left: 0;
+}
+
+.br {
+  border-right: 0;
+}
+
+.bt {
+  border-top: 0;
+}
+
+.bb {
+  border-bottom: 0;
+}
+
+footer {
+  background-color: rgb(7, 9, 39);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  color: rgb(227, 230, 233);
+  font-size: 22px;
+  font-family: "IM Fell English SC", serif;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    overflow: scroll;
+  }
+  .container {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0 12px;
+  }
+  .gameContainer {
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+  .gameInfoMain {
+    font-size: 50px;
+    margin: 8px;
+  }
+  .resetScreen{
+      flex-direction: column-reverse;
+      height: 400px;
+  }
+  #reset{
+      width: 27vw;
+      font-size: 28px;
+  }
 }
 
-.navbar{
-    color: rgb(227, 230, 233);
-    font-size: 22px;
-    font-family: 'IM Fell English SC', serif;
-}
 
-.container{
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-}
-
-.gameContainer{
-    display: grid;
-    grid-template-columns: repeat(3,10vw);
-    grid-template-rows: repeat(3,10vw);
-    margin: 0 12px;
-}
-
-.box{
-    border: 1.5px solid rgb(31, 30, 30);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.boxText{
-    font-family: 'Prompt', sans-serif;
-}
-
-.resetScreen{
-    position: absolute;
-    top:56px;
-    width: 100%;
-    height: 100%;
-    background:transparent;
-    background-color: rgba(0, 0, 0, 0.794);
+@media only screen and (max-width: 450px) {
+    .gameInfoMain{
+        font-size: 35px;
+    }
 }
