@@ -1,3 +1,5 @@
+console.log("Welcome to Tic Tac Toe")
+console.log("Created By Mayank Kamra")
 turn = "X";
 clickAudio = new Audio("ting.mp3");
 winAudio = new Audio("winning.mp3");
@@ -5,12 +7,12 @@ clickAudio.playbackRate = 3;
 gameOver = false;
 resetScreen = document.getElementsByClassName("resetScreen")[0];
 turnText = document.getElementsByClassName("gameInfoText")[0];
+resetScreenText = document.getElementsByClassName("gameInfoText")[1];
+gif = document.getElementsByClassName("gif")[0];
 turnText.style.visibility = "visible";
 turnText.style.margin = "8px";
 resetScreen.style.visibility = "hidden";
-resetScreenText = document.getElementsByClassName("gameInfoText")[1];
 resetScreenText.style.visibility = "hidden";
-gif = document.getElementsByClassName("gif")[0];
 resetScreenText.style.fontSize = "35px";
 // Media Query in JS
 let x = window.matchMedia("(max-width: 900px)");
@@ -91,7 +93,7 @@ function gamePlay() {
   Array.from(boxes).forEach((box) => {
     box.addEventListener("click", (e) => {
       if (!gameOver) {
-        console.log(gameOver);
+        // console.log(gameOver);
         clickAudio.play();
         if (e.target.innerText === "") {
           e.target.innerText = turn;
@@ -115,9 +117,7 @@ function gamePlay() {
               resetScreen.style.visibility = "visible";
               resetScreenText.innerText = "Game is Draw";
               turnText.style.visibility = "hidden";
-              // resetScreenText.style.top = "71px";
               turnText.style.display = "none";
-              // resetScreenText.style.right = "-215px";
               resetScreenText.style.visibility = "visible";
               gif.style.visibility = "hidden";
               gif.style.display = "none";
