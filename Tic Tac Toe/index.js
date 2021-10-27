@@ -3,7 +3,19 @@ console.log("Created By Mayank Kamra")
 turn = "X";
 clickAudio = new Audio("ting.mp3");
 gamePlayAudio = new Audio("gamePlayAudio.mp3");
-setInterval(()=>gamePlayAudio.play(),1)
+gamePlayAudio.muted = true
+gamePlayAudio.loop = true
+function tabActive(){
+  if(document.hidden===false){
+    gamePlayAudio.muted = false
+    gamePlayAudio.play();
+  }
+  else{
+    gamePlayAudio.muted = true
+    gamePlayAudio.pause();
+  }
+}
+setInterval(tabActive,250)
 winAudio = new Audio("winning.mp3");
 clickAudio.playbackRate = 3;
 gameOver = false;
