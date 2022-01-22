@@ -103,11 +103,6 @@ function isDraw() {
 
 // Game start here
 function gamePlay() {
-  let screenHeight = document.documentElement.clientHeight;
-  let containerHeight = document.getElementsByClassName('container')[0].clientHeight;
-  let height = screenHeight-containerHeight;
-  document.getElementsByTagName('header')[0].style.height = `${height/2}px`;
-  document.getElementsByTagName('footer')[0].style.height = `${height/2}px`;
   boxes = document.getElementsByClassName("box");
   Array.from(boxes).forEach((box) => {
     box.addEventListener("click", (e) => {
