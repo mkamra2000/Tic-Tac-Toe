@@ -3,7 +3,9 @@ A Tic Tac Toe is game created during project that is also called noughts and cro
 
 Here are some snapshots of my Tic Tac Toe Application
 
-![Tic Tac Toe Logo](Tic%20Tac%20Toe/favicon.jpeg)
+## Favicon
+
+![Tic Tac Toe Logo](https://user-images.githubusercontent.com/73895535/165121224-f765e629-000c-49de-a1ce-5ce7da074b51.jpeg)
 
 
 ## Snapshots
